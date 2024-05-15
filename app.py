@@ -4,12 +4,13 @@ import pandas as pd
 import pickle
 
 model = pickle.load(open('model.pkl','rb'))
-
+#add title
 sts.title('Stroke Prediction using Machine Learning')
+
 
 def predict_stroke(age, hypertension, heart_disease, ever_married, work_type, avg_glucose_level, bmi, smoking_status):
     input_values = [[age, hypertension, heart_disease, ever_married, work_type, avg_glucose_level, bmi, smoking_status]]
-    prediction = model.predict(input_values)[0]
+    prediction = model.predict(input_values)[0] #calling saved model for prediction
     if prediction == 1:
         return 'Shows indicators for stroke risk.'
     else:
