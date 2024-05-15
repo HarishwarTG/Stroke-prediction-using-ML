@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+matplotlib
+requests
+altair==4.0 
+scikit-learn
